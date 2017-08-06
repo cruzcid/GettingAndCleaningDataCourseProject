@@ -1,6 +1,7 @@
 # GettingAndCleaningDataCourseProject
  The goal is to prepare tidy data that can be used for later analysis.
  
+
 # The dataset add to the following files to the existing ones:
 
 - 'run_analysis.R': Perform the analysis detailed on Getting and Cleaning Data Course Project instructions.
@@ -9,7 +10,13 @@
 
 - 'avgByActivitySubject.csv': Data set with the average of each variable for each activity and each subject. 
 
+- 'AvgActivitySubjectVariables.txt': Data varibles of avgByActivitySubject.csv
+
+- 'meanStandardVariables.txt': Data varibles of meanStandardTrainTest.csv
+
+
 # How scripts work and how they are connected.
+
   The run_analysis.R script reads "UCI HAR Dataset/train/X_train.txt", "UCI HAR Dataset/test/X_test.txt"  as a data.table
   and a ssociate them with their respectiv activity and subject from "UCI HAR Dataset/train/y_train.txt",
   "UCI HAR Dataset/test/y_test.txt", "UCI HAR Dataset/test/subject_test.txt", "UCI HAR Dataset/train/subject_train.txt" files.
