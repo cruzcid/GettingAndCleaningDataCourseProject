@@ -2,7 +2,7 @@
  The goal is to prepare tidy data that can be used for later analysis.
  
 
-# The dataset add to the following files to the existing ones:
+# The dataset add the following files to the existing ones:
 
 - 'run_analysis.R': Perform the analysis detailed on Getting and Cleaning Data Course Project instructions.
 
@@ -13,6 +13,9 @@
 - 'AvgActivitySubjectVariables.txt': Data varibles of avgByActivitySubject.csv
 
 - 'meanStandardVariables.txt': Data varibles of meanStandardTrainTest.csv
+
+
+# Original dataset files:
 
 - 'features_info.txt': Shows information about the variables used on the feature vector.
 
@@ -39,27 +42,34 @@
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
 
-# How scripts work and how they are connected.
+# How "run_analysis.R" script works and how the readed files are connected.
 
-  The run_analysis.R script reads "UCI HAR Dataset/train/X_train.txt", "UCI HAR Dataset/test/X_test.txt"  as a data.table
-  and a ssociate them with their respectiv activity and subject from "UCI HAR Dataset/train/y_train.txt",
-  "UCI HAR Dataset/test/y_test.txt", "UCI HAR Dataset/test/subject_test.txt", "UCI HAR Dataset/train/subject_train.txt" files.
+  1.- The  script reads the following files as data frames:
+      Feature measurements:
+      - "UCI HAR Dataset/train/X_train.txt"
+      - "UCI HAR Dataset/test/X_test.txt"  
+      Activity:
+      - "UCI HAR Dataset/train/y_train.txt"
+      - "UCI HAR Dataset/test/y_test.txt"
+      Subject:
+      - "UCI HAR Dataset/train/subject_train.txt"
+      - "UCI HAR Dataset/test/subject_test.txt"
+      Features names:
+      - "UCI HAR Dataset/features.txt"
+  2.- Uses a function which replace numbers of the activities with their correspondant descriptive name on activities data           frames.  
+   
+  3.- Merges the "training" as with its respective "activity" and "subject" set adding them as a column, apply same process to       "test" set.
+
+  4.- Assign the features labels to the "train" and "test" set after formatting each feature label. 
+
+  5.- Merges the "training" and "test" set by rows.
+      By this point a general data set is obtained to proceed with further analisys. 
+  
+  6.- Extracts only the measurements on the mean and standard deviation for each measurement and export 
+      data to csv file "UCI HAR Dataset/meanStandardTrainTest.csv".
     
-  Uses descriptive activity names to name the activities in the data set by applying a function which replace 
-  numbers with the correspondant descriptive name.
-  
-  Merges the training and the test sets to create one data set.  
-  
-  Appropriately labels the data set with descriptive variable names by obtaining
-  the names of the features to asign them to the Train and Test data.table. 
-  
-  By this point a general data set is obtained to proceed with further analisys. 
-  
-  Extracts only the measurements on the mean and standard deviation for each measurement and export 
-  data to csv file "UCI HAR Dataset/meanStandardTrainTest.csv".
-    
-  From the general data set, creates a second, independent tidy data set with the 
-  average of each variable for each activity and each subject.
-  Export data to csv file "UCI HAR Dataset/avgByActivitySubject.csv".
+  7.- From the general data set obtained in step 5, creates a second, independent tidy data set with the 
+      average of each variable for each activity and each subject.
+      Export data to csv file "UCI HAR Dataset/avgByActivitySubject.csv".
   
 # Further information about the scipts may be found in the CodeBook.md and run_analysis.R.

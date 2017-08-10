@@ -1,10 +1,20 @@
+
+| Input         | Output                    	 | 
+| ------------- |:------------------------------:| 
+| None          | meanStandardVariables.txt 	 | 
+|				| meanStandardTrainTest.csv 	 |
+|				| avgByActivitySubject.csv       |
+|				| AvgActivitySubjectVariables.txt|	
+
 # Variables description
   Description of the variables in "meanStandardTrainTest.csv" and "avgByActivitySubject.csv"
 
 ## This information is also contain by separate in "AvgActivitySubjectVariables.txt" and "meanStandardVariables.txt"
 
   1.- meanStandardTrainTest
-
+    
+	- Only mean and std features were considered for this analysis.
+	
 	"1" "tBodyAccMag_mean"
 	"2" "tBodyAccMag_std"
 	"3" "tGravityAccMag_mean"
