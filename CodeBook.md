@@ -14,7 +14,7 @@
   1.- meanStandardTrainTest
     
 	- Only mean and std features were considered for this analysis.
-	
+
 	"1" "tBodyAccMag_mean"
 	"2" "tBodyAccMag_std"
 	"3" "tGravityAccMag_mean"
@@ -517,10 +517,10 @@
 	"479" "angleZ_gravityMean"
 
 ##  Study Design 
-==================================================================
+
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
-==================================================================
+
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova.
